@@ -1,13 +1,47 @@
-body
+main
 {
-    height: 80vh;
-    gap: 0px;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
     column-gap: 0px;
+}
+
+
+.setting
+{
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 0px;
+}
+
+.setting .setting-gear
+{
+    background-color: transparent;
+    border: 0px solid;
+}
+
+.setting .fa-gear
+{
+    font-size: 2em;
+}
+
+.setting .fa-gear:hover #dropdown-menu
+{
+    display: block;
+}
+
+.setting #dropdown-menu
+{
+    display: none;
+    background-color: darkgrey;
+    border: 2px solid;
+
+    width: auto;
+    height: auto;
 }
 
 #display-number
@@ -50,6 +84,11 @@ body
     box-shadow 0.3s ease 0s;
 }
 
+#milisec-dis
+{
+    font-size: 0.4em;
+}
+
 .function-buttons:hover
 {
     background-color: rgb(251, 245, 245);
@@ -72,7 +111,7 @@ body
     opacity: 0.7;
     color: rgb(205, 205, 205);
     transform: scale(0.96) translateY(3px);
-
+    border: 1.5px solid;
 }
 
 .startBut-paused-state
@@ -84,7 +123,9 @@ body
 .pauseBut-paused-state
 {
     border: 1.9px solid black;
-    transform: scale(1.06);
+    transform: scale(1.04);
+    box-shadow: 1px 1px 50px rgb(239, 120, 120);
+
 }
 
 #program-status

@@ -15,6 +15,8 @@ document.getElementById("start-but").onclick
     pauseBool = false;
     document.getElementById("pause-but").textContent = "Pause";
     document.getElementById("display-number").classList.remove("paused");
+    document.getElementById("pause-but").classList.remove("pauseBut-paused-state");
+    document.getElementById("start-but").classList.remove("startBut-paused-state");
 }
 
 document.getElementById("pause-but").onclick
@@ -60,6 +62,8 @@ document.getElementById("reset-but").onclick
     pauseBool = false;
     document.getElementById("pause-but").textContent = "Pause";
     document.getElementById("display-number").classList.remove("paused");
+    document.getElementById("pause-but").classList.remove("pauseBut-paused-state");
+    document.getElementById("start-but").classList.remove("startBut-paused-state");
 }
 
 setInterval(() => 
