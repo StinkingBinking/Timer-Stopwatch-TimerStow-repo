@@ -68,40 +68,12 @@ document.getElementById("reset-but").onclick
 
 setInterval(() => 
 {
-    if (hours < 10)
-    {
-        document.getElementById("hour-dis").textContent = `${0}${hours}`;
-    }
-    else
-    {
-        document.getElementById("hour-dis").textContent = hours;
-    }
-    if (mins < 10)
-    {
-        document.getElementById("min-dis").textContent = `${0}${mins}`;
-    }
-    else
-    {
-        document.getElementById("min-dis").textContent = mins;
-    }
-    if (secs < 10)
-    {
-        document.getElementById("sec-dis").textContent = `${0}${secs}`;
-    }
-    else
-    {
-        document.getElementById("sec-dis").textContent = secs;
-    }
-    if (milisecs < 10)
-    {
-        document.getElementById("milisec-dis").textContent = `${0}${milisecs}`;
 
-    }
-    else
-    {
-        document.getElementById("milisec-dis").textContent = milisecs;
-    }
-    
+    document.getElementById("hour-dis").textContent=String(hours).padStart(2, "0");
+    document.getElementById("min-dis").textContent =String(mins).padStart(2, "0");
+    document.getElementById("sec-dis").textContent =String(secs).padStart(2,"0");
+    document.getElementById("milisec-dis").textContent =String(milisecs).padStart(2, "0");
+
     if(startBool && !pauseBool && !resetBool)
     {
         milisecs++;
