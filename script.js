@@ -80,17 +80,44 @@ setInterval(() =>
         if (milisecs == 100)
         {
             milisecs = 0;
+
+            document.querySelector("#sec-dis").style.setProperty('--anim-second', 0.65 + 's');
+            document.querySelector("#sec-dis").classList.add("change-display");
+
             secs++;
+
+            document.querySelector("#sec-dis").addEventListener("animationend", function()
+            {
+                document.querySelector("#sec-dis").classList.remove("change-display");
+            }, {once: true});
         }
         if (secs == 60)
         {
             secs=0;
+
+            document.querySelector("#min-dis").style.setProperty('--anim-second', 1.5 + 's');
+            document.querySelector("#min-dis").classList.add("change-display");
+            
             mins++;
+
+            document.querySelector("#min-dis").addEventListener("animationend", function()
+            {
+                document.querySelector("#min-dis").classList.remove("change-display");
+            }, {once: true});
         }
         if (mins == 60)
         {
             mins = 0;
+
+            document.querySelector("#hour-dis").style.setProperty('--anim-second', 1.5 + 's');
+            document.querySelector("#hour-dis").classList.add("change-display");
+
             hours++;
+
+            document.querySelector("#hour-dis").addEventListener("animationend", function()
+            {
+                document.querySelector("#hour-dis").classList.remove("change-display");
+            }, {once: true});
         }
         if(hours == 100)
         {
